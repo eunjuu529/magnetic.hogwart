@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magicentia</title>
+  <style>
+    /* 모든 요소에 box-sizing 적용 */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Noto Sans', sans-serif;
+      background-color: black;
+      color: white;
+      max-width: 100vw;
+      overflow-x: hidden;
+    }
+
+    .header, .footer {
+      text-align: center;
+      padding: 20px 10px;
+      color: #933e3e;
+    }
+
+    .line {
+      width: 90%;
+      margin: 10px auto;
+      border-top: 1px solid #933e3e;
+    }
+
+    .logo {
+      width: 120px;
+      margin: 20px auto;
+      display: block;
+      opacity: 1;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 15px;
+      margin-bottom: 40px;
+    }
+    a {
+  color: inherit;            /* 부모 요소의 색상 따라감 */
+  text-decoration: none;     /* 밑줄 제거 */
+}
+
+    .section {
+      background-color: white;
+      color: #933e3e;
+      padding: 40px 20px;
+      border-radius: 40px;
+      margin: 0 10px; /* 좌우 여백 약간 추가 */
+    }
+
+    .section h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #933e3e;
+      display: inline-block;
+    }
+
+    .section p {
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 100px;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .category-box {
+      border: 1px solid #6e2b2b;
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 30px;
+      text-align: right;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      background-color: white;
+      color: #6e2b2b;
+      font-weight: bold;
+    }
+
+    /* 위치 조정 (3열 범위 내) */
+    .utility { grid-column: 1 / 2; grid-row: 1 / 2; }
+    .combat  { grid-column: 2 / 3; grid-row: 1 / 2; }
+    .travel  { grid-column: 3 / 4; grid-row: 1 / 2; }
+    .change  { grid-column: 1 / 3; grid-row: 2 / 3; }
+    .dark    { grid-column: 3 / 4; grid-row: 2 / 3; }
+    .emotion { grid-column: 1 / 4; grid-row: 3 / 4; }
+
+    .quote {
+      font-size: 18px;
+      text-align: center;
+      color: #933e3e;
+      padding: 40px 20px;
+    }
+
+    .quote small {
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    /* 반응형 소폭 보완 (원하면 삭제 가능) */
+    @media (max-width: 480px) {
+      .title {
+        font-size: 36px;
+      }
+      .section {
+        padding: 30px 15px;
+      }
+      .category-box {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="line"></div>
+    <div>Hogwart</div>
+    <div class="line"></div>
+  </div>
+
+  <img src="Hogwarts Logo.png" alt="Hogwarts Logo" class="logo">
+
+  <div class="title">
+    MAGENTIA
+  </div>
+  <div class="subtitle">
+    호그와트 학생들을 위한 마법 주문 교과서
+  </div>
+
+  <div class="section">
+    <h2>ABOUT</h2>
+    <p>
+      호그와트 마법학교 학생 여러분,
+이곳은 여러분을 위한 모바일 마법 주문 교과서 웹사이트입니다.<br>
+마법의 본질을 익히고, 연마하며, 완벽히 숙달하기 위해 언제 어디서나 이 도구를 사용할 수 있음을 엄숙히 알립니다.<br>
+손 안에 지니는 이 주문서는 여러분의 마법 수련에 있어 결코 가볍게 여겨서는 안 될 중요한 동반자임을 명심하십시오.<br>
+이제, 신중한 마음과 깊은 집중으로 마법의 세계에 한걸음 더 다가서십시오.
+    </p>
+
+    <h2>CATEGORY</h2>
+    <p>
+      각 카테고리는 특정 마법적 필요에 따라 구분되어 있습니다. <br>
+      신중히 선택하십시오.
+    </p>
+    <div class="categories">
+      <div class="category-box utility"><br><a href="utility.html" target="_blank">UTILITY</a></div>
+      <div class="category-box combat"><br><a href="combat.html" target="_blank">COMBAT</a></div>
+      <div class="category-box travel"><br><a href="travel.html" target="_blank">TRAVEL</a></div>
+      <div class="category-box change"><br><a href="change.html" target="_blank">CHANGE</a></div>
+      <div class="category-box dark"><br><a href="dark.html" target="_blank">DARK</a></div>
+      <div class="category-box emotion"><br><a href="emotion.html" target="_blank">EMOTION</a></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="line"></div>
+    <div class="quote">
+      THIS BOOK MAY TEACH YOU MAGIC.<br />
+      BUT ONLY YOU<br />
+      CAN GIVE THAT MAGIC LIFE.
+      <small>- ALBUS DUMBLEDORE</small>
+    </div>
+  </div>
+</body>
+</html>
